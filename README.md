@@ -13,5 +13,4 @@ java -jar target/uberjar/name-generator-0.1.0-SNAPSHOT-standalone.jar
 
 Copyright © 2018 Evan Louie
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Distributed under the Eclipse Public License
