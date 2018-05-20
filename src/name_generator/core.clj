@@ -8,7 +8,7 @@
                 (fn [filename]
                   (slurp (clojure.java.io/resource filename)))))
 
-(defn get-last-names []
+(defn- get-last-names []
   (let [census-string (read-file "Names_2010Census.csv")
         lines (string/split-lines census-string)
         keys (map #(keyword %) (string/split (first lines) #","))
@@ -17,7 +17,7 @@
         last-names (map #(string/capitalize (get % :name)) census)]
     last-names))
 
-(defn get-first-names []
+(defn- get-first-names []
   (letfn [(get-name-from-line [line]
             (string/capitalize (first (string/split line #"\s"))))
           (get-names-from-string [file-string]
