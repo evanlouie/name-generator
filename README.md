@@ -6,7 +6,7 @@ Random name generator based on 2010 and 1990 US census data. Mainly just to brus
 
 ```bash
 lein uberjar
-java -jar name-generator-0.1.0-standalone.jar
+java -jar target/uberjar/name-generator-0.1.0-SNAPSHOT-standalone.jar
 ```
 
 ## License
