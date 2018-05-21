@@ -5,7 +5,8 @@
 (defrecord Name [^String fname ^String lname])
 
 (def read-resource
-  "Read a file from project resources directory and return as string; result is memoized"
+  ^{:private true
+    :doc "Read a file from project resources directory and return as string; Result is memoized"}
   (memoize
    (fn [filename]
      (slurp (clojure.java.io/resource filename)))))
