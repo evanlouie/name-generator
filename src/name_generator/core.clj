@@ -9,7 +9,7 @@
   [& args]
   (do
     (println "How many names should I generate?")
-    (def n (read-string (read-line)))
+    (def n (Integer/parseInt (read-line)))
     (def names (take n (name-sequence)))
     (->> names
          (map (fn [^Name name]

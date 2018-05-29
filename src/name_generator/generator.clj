@@ -34,13 +34,11 @@
           names (flatten (pmap get-names-from-string names-strings))]
       (distinct names))))
 
-(def ^:private ^clojure.lang.LazySeq
-  first-names
+(def ^:private ^clojure.lang.LazySeq first-names
   "Memoized list of male and female first names."
   (memoize (fn [] (get-first-names))))
 
-(def ^:private ^clojure.lang.LazySeq
-  last-names
+(def ^:private ^clojure.lang.LazySeq last-names
   "Memoized list of last names."
   (memoize (fn [] (get-last-names))))
 
