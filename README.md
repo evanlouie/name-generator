@@ -2,13 +2,19 @@
 
 Random name generator based on 2010 and 1990 US census data. Mainly just to brush up on my Clojure.
 
-## Dev / clj
+## clj
+
+We must ensure the `resources` directory is added to the classpath. I've added an alias for it in `deps.edn`. But it still must be loaded at runtime.
 
 ```bash
 clj -C:resources -m name-generator.core
 ```
 
-## Build / UberJAR
+## Leiningen
+
+The `resources` directory will automatically be loaded into the classpath via Leiningen.
+
+### UberJAR
 
 ```bash
 lein uberjar
