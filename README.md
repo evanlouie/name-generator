@@ -2,7 +2,13 @@
 
 Random name generator based on 2010 and 1990 US census data. Mainly just to brush up on my Clojure.
 
-## Usage
+## Dev / clj
+
+```bash
+clj -C:resources -m name-generator.core
+```
+
+## Build / UberJAR
 
 ```bash
 lein uberjar
