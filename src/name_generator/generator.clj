@@ -7,7 +7,12 @@
   "Read a file from project resources directory and return as string."
   ^String
   [^String filename]
-  (slurp (clojure.java.io/resource filename)))
+  (try
+    (slurp (clojure.java.io/resource filename))
+    (catch Exception e
+      (do
+        (println (str "Exception thrown while reading " filename ": " (.getMessage e)))
+        ""))))
 
 (defn- get-last-names
   "Parse the 2010 Census CSV and return a distinct sequence of last names."
@@ -55,4 +60,3 @@
   ^clojure.lang.LazySeq
   []
   (lazy-seq (cons (generate-name) (name-sequence))))
-
